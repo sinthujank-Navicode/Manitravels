@@ -44,12 +44,12 @@ const Navbar = () => {
   );
 
   return (
-<nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-white shadow-md">
-      <div className="flex items-center space-x-15 w-full">  
+<nav className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4  ">
+      <div className="flex items-center space-x-15 bg-white  rounded-[50]  shadow-2xl p-2 pl-[2rem] pr-[4rem]">  
         <div className="text-3xl mb-2 font-bold">logo</div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 font-bold">
+        <div className="hidden md:flex space-x-6 font-bold ">
           {menuItems.map((item) => (
             <a key={item.name} href={item.link} className="">
               {item.name}
@@ -60,8 +60,11 @@ const Navbar = () => {
 
       {/* Language & Contact Button */}
       <div className="hidden md:flex items-center space-x-12 relative">
+        <span className="shadow-2xl bg-white p-[1.1rem] pl-[1.5rem] pr-[1.5rem] rounded-[50]">
+
         {languageDropdown}
-        <button className="bg-black text-white px-9 py-2 rounded-2xl">Contact</button>
+        </span>
+        <button className="bg-white shadow-2xl rounded-[50] text-black px-9 p-[1rem] ">Contact</button>
       </div>
 
       {/* Mobile Menu Button */}
